@@ -5,8 +5,8 @@
 Taonado operates **two separate systems** with completely different security models. **Understanding this difference is crucial for fund safety.**
 
 **Quick Answer**:
-- 🏦 **WTAO Mining** (what our utilities use) = ❌ **NO SECRETS NEEDED**
-- 🕵️ **Privacy Mixer** = ✅ **REQUIRES SECRET NOTES**
+- 🏦 **WTAO Mining** (what our utilities use) = ❌ **NO SECRETS NEEDED** ✅ **EARNS EMISSIONS**
+- 🕵️ **Privacy Mixer** = ✅ **REQUIRES SECRET NOTES** ❌ **NO EMISSIONS**
 
 ## WTAO Mining vs Privacy Mixer Systems
 
@@ -34,6 +34,7 @@ Taonado operates **two separate systems** with completely different security mod
 **Privacy**: ✅ Completely anonymous and untraceable
 **Safety**: Secret note is the ONLY way to recover funds
 **Amounts**: Only fixed pools (0.1, 1, 10, 100, 1000 TAO)
+**Emissions**: ❌ **NO TAO EMISSIONS EARNED** (privacy service only)
 
 **Commands Used:**
 - `pnpm cli` → Privacy Operations → Privacy Deposit

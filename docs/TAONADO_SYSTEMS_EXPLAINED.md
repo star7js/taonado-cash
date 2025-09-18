@@ -4,6 +4,23 @@
 
 Taonado operates **two completely separate systems** under one project. This distinction is crucial but not always clearly communicated, leading to confusion about deposits, secrets, and fund safety.
 
+## 🚨 EMISSIONS EARNING CLARIFICATION
+
+**ONLY WTAO Mining earns TAO emissions. Privacy Mixer does NOT earn emissions.**
+
+After investigating the smart contract architecture:
+
+### WTAO Mining System ✅ EARNS EMISSIONS
+- **Weight Calculation**: `weights.sol` uses `wtao.balanceOf(depositer)` from the WTAO contract
+- **Emission Distribution**: Proportional to WTAO balance held by addresses associated with hotkeys
+- **Contract Integration**: WTAO contract → DepositTracker → WeightsV2 → Subnet emissions
+
+### Privacy Mixer System ❌ NO EMISSIONS
+- **Separate Contracts**: ERC20Taonado contracts are completely isolated from the WTAO/DepositTracker system
+- **No Weight Calculation**: Privacy mixer deposits do not contribute to `weights.sol` calculations
+- **Purpose**: Pure privacy service with no emission earning functionality
+- **`totalLifetimeDeposits`**: Used only for internal privacy mixer scoring, not emissions
+
 ## System Overview
 
 ```
@@ -121,7 +138,7 @@ pnpm cli
 | **Complexity** | Simple | Advanced |
 | **Fund Recovery** | Standard blockchain | Impossible if note lost |
 | **Flexibility** | High | Limited |
-| **Earning Potential** | Subnet emissions | None (privacy service) |
+| **Earning Potential** | Subnet emissions | ❌ **NO EMISSIONS** |
 
 ## User Decision Framework
 
@@ -140,6 +157,7 @@ pnpm cli
 - ✅ You understand permanent loss risk
 - ✅ You don't need immediate withdrawal access
 - ✅ You're willing to wait for anonymity set growth
+- ✅ **You DON'T need to earn emissions** (privacy mixer pays no rewards)
 
 ## Common Misconceptions
 
@@ -157,6 +175,9 @@ pnpm cli
 
 ### ❌ "I lost my secret note, Taonado can help recover it"
 **Reality**: No recovery possible for privacy mixer. This is by design for security.
+
+### ❌ "Privacy mixer deposits also earn TAO emissions"
+**Reality**: ONLY WTAO mining earns emissions. Privacy mixer is a pure privacy service with no rewards.
 
 ## Technical Architecture
 
