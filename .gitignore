@@ -22,3 +22,12 @@ ignition/deployments/chain-31337
 # secrets and other local configs
 config.ts
 neuron/
+
+# Personal test scripts and wallet info (keep these local)
+**/personal-*
+**/*-personal.*
+test_*.ts
+check_*.ts
+quick_*.py
+fund_*.py
+get_*.ts
