@@ -31,7 +31,7 @@ Shows you where to send TAO for mining operations.
 
 Example:
 ```bash
-python3 utils/local-transfer.py mining 5DfsnqBRZPqzMrUVqetmjaHWpeGZ2bMJtnmbSYBsSGFX5DwZ 0.5
+python3 utils/local-transfer.py your_wallet 5ABC...xyz123 0.5
 ```
 
 ### 3. Balance Checker
@@ -68,7 +68,7 @@ npx ts-node utils/address-helper.ts
 ### Step 2: Fund EVM Wallet
 ```bash
 # Option A: From local wallet
-python3 utils/local-transfer.py your_wallet_name SS58_MIRROR_ADDRESS amount
+python3 utils/local-transfer.py your_wallet SS58_MIRROR_ADDRESS amount
 
 # Option B: From mobile wallet (NOVA, etc.)
 # Send TAO to the SS58 Mirror Address from step 1

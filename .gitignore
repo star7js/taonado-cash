@@ -31,3 +31,18 @@ check_*.ts
 quick_*.py
 fund_*.py
 get_*.ts
+
+# Claude Code development files (keep local)
+.claude/
+*.claude.md
+
+# Personal setup and wallet scripts (keep local)
+create_evm_wallet.py
+get_seed.py
+restore*.py
+wallet_commands.md
+
+# Any files with actual addresses, transactions, or personal info
+*personal*
+*_personal.*
+*-personal.*

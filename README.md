@@ -4,6 +4,11 @@
 
 </div>
 
+> **🔧 Community Utilities Fork**
+> This is a community-maintained fork of Taonado with enhanced user-friendly utilities for testing and mining operations.
+> **Original Project**: [github.com/taonado/taonado-cash](https://github.com/taonado/taonado-cash)
+> **What's Added**: Safe testing scripts, better documentation, and step-by-step guides for new users.
+
 # A Privacy Preserving TAO Mixer on Bittensor
 
 **Taonado** is a zero knowledge (ZK) based token mixer for the Bittensor ($TAO) ecosystem, inspired by the privacy principles of Tornado Cash.
@@ -17,6 +22,17 @@ Built to align with Bittensor's incentivized network, Taonado rewards participan
 - **Incentivized Participation**: Earn rewards for depositing TAO, enhancing network security.
 - **Permissionless Withdrawals**: Withdraw TAO to any address without revealing prior activity.
 - **Bittensor Integration**: Seamlessly interact with TAO subnets and the broader ecosystem.
+
+## 🛠️ Community Utilities (This Fork)
+
+- **Safe Testing Scripts**: Test mining with small amounts before committing large funds
+- **User-Friendly Workflow**: Step-by-step guides for new users
+- **Address Management**: Easy tools to find your EVM and SS58 addresses
+- **Balance Monitoring**: Check TAO balances and mining status
+- **Mining Setup**: Automated scripts for setting up mining operations
+- **Comprehensive Documentation**: Clear explanations of mining vs privacy deposits
+
+**Quick Start**: See [`utils/README.md`](./utils/README.md) for the complete workflow.
 
 ## 📖 How It Works
 

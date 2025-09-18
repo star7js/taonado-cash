@@ -20,7 +20,7 @@ def main():
         print("=" * 40)
         print("\nUsage: python3 utils/local-transfer.py <wallet_name> <evm_mirror_address> [amount]")
         print("\nExample:")
-        print("  python3 utils/local-transfer.py mining 5DfsnqBRZPqzMrUVqetmjaHWpeGZ2bMJtnmbSYBsSGFX5DwZ 0.5")
+        print("  python3 utils/local-transfer.py your_wallet 5ABC...xyz123 0.5")
         print("\nGet your EVM mirror address with:")
         print("  npx ts-node utils/address-helper.ts")
         return
