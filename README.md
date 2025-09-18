@@ -7,7 +7,7 @@
 > **🔧 Community Utilities Fork**
 > This is a community-maintained fork of Taonado with enhanced user-friendly utilities for testing and mining operations.
 > **Original Project**: [github.com/taonado/taonado-cash](https://github.com/taonado/taonado-cash)
-> **What's Added**: Safe testing scripts, more documentation, and step-by-step guides for new users.
+> **What's Added**: Safe testing scripts, more documentation, and step-by-step guides.
 
 # A Privacy Preserving TAO Mixer on Bittensor
 
