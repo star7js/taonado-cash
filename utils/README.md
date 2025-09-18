@@ -1,6 +1,15 @@
-# Taonado Mining Utilities
+# Taonado WTAO Mining Utilities
 
-This directory contains generalized scripts for Taonado mining operations that are safe to commit to GitHub (no hardcoded wallet addresses or private keys).
+This directory contains generalized scripts for **Taonado's WTAO Mining system** that are safe to commit to GitHub (no hardcoded wallet addresses or private keys).
+
+## ⚠️ Important: What These Utilities Do
+
+These utilities are specifically for **WTAO Mining** (earning Subnet 113 emissions), **NOT** for the Privacy Mixer system:
+
+- 🏦 **WTAO Mining** ← **These utilities**
+- 🕵️ **Privacy Mixer** ← Use `pnpm cli` for privacy operations
+
+**For complete system explanation**: See [`../docs/TAONADO_SYSTEMS_EXPLAINED.md`](../docs/TAONADO_SYSTEMS_EXPLAINED.md)
 
 ## Prerequisites
 
@@ -106,21 +115,27 @@ Scripts support these environment variables for automation:
 - `AUTO_CONFIRM=true` - Skip manual confirmations
 - `DEBUG=true` - Enable verbose logging
 
-## Deposit Secrets vs Mining
+## WTAO Mining vs Privacy Mixer
 
-### Mining (What These Scripts Do)
-- **Regular WTAO deposits** for earning emissions
-- **No secrets needed** - standard blockchain transactions
-- **Can withdraw anytime** using normal transactions
-- **Funds are in WTAO contract** and visible on blockchain
+### 🏦 WTAO Mining (What These Scripts Do)
+- **Purpose**: Earn Subnet 113 emissions through liquidity provision
+- **Process**: TAO → WTAO contract → Mining rewards
+- **Secrets**: ❌ **NO SECRETS NEEDED** - standard blockchain transactions
+- **Amounts**: Any amount works (0.25 TAO, 1.5 TAO, 10.7 TAO, etc.)
+- **Withdrawal**: Use your private key anytime with `pnpm withdraw`
+- **Privacy**: Transactions are public (like normal blockchain)
+- **Risk**: Low (standard smart contract risk)
 
-### Privacy Deposits (Different Process)
-- **Anonymous mixing pools** (0.1, 1, 10, 100, 1000 TAO)
-- **Generates secret notes** required for withdrawal
-- **Complete anonymity** - cannot be traced
-- **Use**: `pnpm cli` → Privacy Operations
+### 🕵️ Privacy Mixer (Different System)
+- **Purpose**: Anonymous transactions using zk-SNARKs
+- **Process**: WTAO → Anonymous pools → Secret notes
+- **Secrets**: ✅ **REQUIRES SECRET NOTES** (lose note = lose funds)
+- **Amounts**: Only fixed pools (0.1, 1, 10, 100, 1000 TAO)
+- **Withdrawal**: Only possible with secret note
+- **Privacy**: Complete anonymity
+- **Risk**: Medium (secret management risk)
 
-**Important**: These mining scripts do NOT generate secrets. If you use privacy deposits later, save those secrets securely!
+**🎯 Key Point**: These utilities are for WTAO Mining only. For privacy mixer, use `pnpm cli` and understand the secret note risks first!
 
 ## Troubleshooting
 

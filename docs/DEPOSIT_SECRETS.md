@@ -1,31 +1,39 @@
 # Taonado Deposit Secrets and Privacy Notes
 
-## Overview
+## ⚠️ CRITICAL: Two Completely Different Systems
 
-Taonado has two different types of deposits, each with different security and privacy characteristics. It's crucial to understand the difference.
+Taonado operates **two separate systems** with completely different security models. **Understanding this difference is crucial for fund safety.**
 
-## Mining Deposits vs Privacy Deposits
+**Quick Answer**:
+- 🏦 **WTAO Mining** (what our utilities use) = ❌ **NO SECRETS NEEDED**
+- 🕵️ **Privacy Mixer** = ✅ **REQUIRES SECRET NOTES**
 
-### Mining Deposits (What We Set Up)
+## WTAO Mining vs Privacy Mixer Systems
+
+**📖 For Complete Details**: See [`TAONADO_SYSTEMS_EXPLAINED.md`](./TAONADO_SYSTEMS_EXPLAINED.md)
+
+### 🏦 WTAO Mining System (What Our Utilities Use)
 **Purpose**: Earn emissions on Subnet 113 by providing liquidity
-**Process**: Deposit TAO → WTAO contract
-**Secrets**: ❌ **NO SECRETS CREATED**
+**Process**: TAO → WTAO contract → Mining rewards
+**Secrets**: ❌ **NO SECRETS CREATED OR NEEDED**
 **Withdrawal**: Standard blockchain transactions anytime
 **Privacy**: ❌ Transactions are public and traceable
-**Safety**: Your TAO is in the WTAO contract, withdrawable with your private key
+**Safety**: Your TAO is in WTAO contract, withdrawable with your private key
+**Amounts**: Any amount works (0.25 TAO, 1.5 TAO, etc.)
 
 **Commands Used:**
 - `pnpm miner` (standard mining)
 - `npx ts-node utils/test-miner.ts` (custom amounts)
-- Scripts deposit into WTAO contract for emissions
+- All utilities in this repository
 
-### Privacy Deposits (Different System)
+### 🕵️ Privacy Mixer System (Requires Secrets)
 **Purpose**: Anonymous mixing for complete privacy
-**Process**: WTAO → Anonymous pools (0.1, 1, 10, 100, 1000 TAO)
-**Secrets**: ✅ **GENERATES SECRET NOTES**
+**Process**: WTAO → Anonymous pools → zk-SNARK proofs
+**Secrets**: ✅ **GENERATES SECRET NOTES (CRITICAL!)**
 **Withdrawal**: Only possible with the secret note
 **Privacy**: ✅ Completely anonymous and untraceable
 **Safety**: Secret note is the ONLY way to recover funds
+**Amounts**: Only fixed pools (0.1, 1, 10, 100, 1000 TAO)
 
 **Commands Used:**
 - `pnpm cli` → Privacy Operations → Privacy Deposit
@@ -149,9 +157,18 @@ Your WTAO → Commitment → Anonymous Pool → zk-SNARK Proof
 
 ## Summary
 
-**Your current setup**: Mining deposits (no secrets needed)
-**Your funds**: Safe and withdrawable with standard methods
-**Secret notes**: Only needed for privacy mixing (different feature)
-**Next steps**: Monitor mining performance, consider privacy deposits later if desired
+**✅ What You Actually Did**: WTAO Mining (no secrets involved)
+**✅ Your Funds Status**: Safe in WTAO contract, withdrawable anytime with private key
+**✅ Secret Notes**: Not applicable to your setup - only needed for privacy mixer
+**✅ Why Our Utilities Work**: They focus on WTAO mining system (the safer option)
 
-Remember: Mining ≠ Privacy. They're different features with different security models!
+**Key Understanding**:
+- 🏦 **WTAO Mining** = Bank account (safe, recoverable, no secrets)
+- 🕵️ **Privacy Mixer** = Cash (anonymous, but lose the note = lose everything)
+
+**Next Steps**:
+- Monitor your mining performance with `npx ts-node utils/mining-status.ts`
+- Consider privacy mixer later if you need anonymity (understand the risks first)
+- Your current setup is the recommended starting point for new users
+
+**Remember**: The Taonado website (taonado.cash) emphasizes privacy mixer features, but WTAO mining is equally valid and often more practical for most users!

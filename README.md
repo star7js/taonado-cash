@@ -25,14 +25,19 @@ Built to align with Bittensor's incentivized network, Taonado rewards participan
 
 ## 🛠️ Community Utilities (This Fork)
 
+**Focus**: Enhanced tools for **WTAO Mining** (Subnet 113 emissions), the safer and more accessible Taonado system.
+
 - **Safe Testing Scripts**: Test mining with small amounts before committing large funds
 - **User-Friendly Workflow**: Step-by-step guides for new users
 - **Address Management**: Easy tools to find your EVM and SS58 addresses
 - **Balance Monitoring**: Check TAO balances and mining status
 - **Mining Setup**: Automated scripts for setting up mining operations
-- **Comprehensive Documentation**: Clear explanations of mining vs privacy deposits
+- **System Clarity**: Clear explanations of WTAO Mining vs Privacy Mixer
+
+**🎯 Why WTAO Mining Focus**: No secret management, any deposit amount, withdrawable anytime, lower risk for new users.
 
 **Quick Start**: See [`utils/README.md`](./utils/README.md) for the complete workflow.
+**System Overview**: See [`docs/TAONADO_SYSTEMS_EXPLAINED.md`](./docs/TAONADO_SYSTEMS_EXPLAINED.md) to understand both systems.
 
 ## 📖 How It Works
 
