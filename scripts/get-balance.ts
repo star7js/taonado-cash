@@ -12,10 +12,14 @@ async function main() {
   console.log("ss58 equivalent:", ss58_address);
 
   const tao_balance = await getTAOBalance(wallet.address);
-  console.log("TAO Balance:", tao_balance);
+  console.log("TAO Balance (raw):", tao_balance);
+  console.log("TAO Balance:", ethers.formatEther(tao_balance), "TAO");
 
   const wtao_balance = await getWTAOBalance(wallet);
-  console.log("WTAO Balance:", wtao_balance);
+  if (wtao_balance) {
+    console.log("WTAO Balance (raw):", wtao_balance);
+    console.log("WTAO Balance:", ethers.formatUnits(wtao_balance, 18), "WTAO");
+  }
 }
 
 main().catch((error) => {

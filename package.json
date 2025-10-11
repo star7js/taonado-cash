@@ -37,7 +37,13 @@
     "cli-local": "hardhat run core/cli.ts --network local",
     "cli-local-substrate": "hardhat run core/cli.ts --network substrate-local",
     "cli-testnet": "hardhat run core/cli.ts --network subevm",
-    "cli": "hardhat run core/cli.ts --network mainnet"
+    "cli": "hardhat run core/cli.ts --network mainnet",
+    "compound": "hardhat run scripts/compound-earnings.ts",
+    "compound-testnet": "hardhat run scripts/compound-earnings.ts --network subevm",
+    "track": "hardhat run scripts/track-earnings.ts",
+    "track-testnet": "hardhat run scripts/track-earnings.ts --network subevm",
+    "mining-status": "hardhat run scripts/check-mining-status.ts",
+    "network-stats": "hardhat run scripts/check-network-stats.ts"
   },
   "license": "MIT",
   "devDependencies": {
